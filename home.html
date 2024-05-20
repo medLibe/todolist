@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List | My Tasks</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-navbar">
+            <span class="logo">LOGO</span><span class="in">.IN</span>
+        </div>
+        <ul class="profile">
+            <li class="username">Jhon Doe - Admin</li>
+            <li class="timestamp" id="timestamp"></li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <h1 class="title">My Tasks</h1>
+        <div class="wrapper-header-task">
+            <a href="create.html" class="button-add"><i class="ri-add-line"></i> Add New Task</a>
+            <div class="select-wrapper">
+                <select id="filter" class="filter-task">
+                    <option value="0">All</option>
+                    <option value="2">Done</option>
+                    <option value="3">Overdue</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="alert-success" id="success"><i class="ri-flag-fill"></i> <span id="text-alert"></span></div>
+        <div class="show-tasks" id="show_tasks"></div>
+    </main>
+
+    <script src="home.js"></script>
+</body>
+</html>

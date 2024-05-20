@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List | Add New Task</title>
+    <link rel="stylesheet" href="create.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand-navbar">
+            <span class="logo">LOGO</span><span class="in">.IN</span>
+        </div>
+        <ul class="profile">
+            <li class="username">Jhon Doe - Admin</li>
+            <li class="timestamp" id="timestamp"></li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <h1 class="title">Add New Task</h1>
+
+        <form id="createForm" class="form-area">
+            <div class="alert-error" id="error"><i class="ri-error-warning-line"></i> An error has occured while submit new task</div>
+            <div class="form-group">
+                <label for="due_date" class="label-input">Due Date <b class="text-danger">*</b></label>
+                <input type="date" class="form-input" id="due_date">
+                <span class="text-danger" style="font-size: 10pt;" id="error_due_date"></span>
+            </div>
+            <div class="form-group">
+                <label for="task_description" class="label-input">Task Description <b class="text-danger">*</b></label>
+                <textarea id="task_description" class="form-input" style="resize: none;">My task is...</textarea>
+                <span class="text-danger" style="font-size: 10pt;" id="error_task_description"></span>
+            </div>
+            <div class="form-group">
+                <label for="priority" class="label-input">Priority <b class="text-danger">*</b></label>
+                <div class="select-wrapper">
+                    <select id="priority" class="select-priority">
+                        <option value="">-- Select Priority --</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <span class="text-danger" style="font-size: 10pt;" id="error_priority"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="button-submit" id="addNewTask">Submit</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="create.js"></script>
+</body>
+</html>
